@@ -1,0 +1,474 @@
+@font-face {
+    font-family: 'Fredoka';
+    src: url('../font/Fredoka.ttf');
+}
+
+.root {
+    -fx-primary-color: #6DAEFB;
+}
+
+.fredoka-text {
+    -fx-font-family: "Fredoka";
+}
+
+.primary-color-text {
+    -fx-text-fill: #6DAEFB;
+}
+
+#exportIconMenuItem:hover>#exportIcon {
+    -fx-fill: #6DAEFB;
+}
+
+.shadow {
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 10, 0, 0, 2);
+}
+
+.tf-file-export-input {
+    -fx-border-color: black;
+    -fx-border-width: 2;
+    -fx-padding: 2 10 2 10;
+    -fx-background-color: #353535;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: gray;
+    -fx-cursor: text;
+}
+
+.tf-user-input {
+    -fx-border-color: black;
+    -fx-border-width: 2;
+    -fx-background-color: #353535;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: gray;
+    -fx-cursor: text;
+}
+
+#dragAndDrop {
+    -fx-background-color: #1B1B1B;
+}
+
+#dragAndDrop:hover {
+    -fx-background-color: #111111;
+}
+
+#dragAndDrop:pressed {
+    -fx-background-color: #000000;
+}
+
+
+/*******************************************************************************
+ *                                                                             *
+ * Black & Blue Button                                                         *
+ *                                                                             *
+ ******************************************************************************/
+
+.qf-black-btn,
+.qf-blue-btn {
+    -fx-padding: 0 0 0 0;
+    -fx-alignment: CENTER;
+    -fx-cursor: hand;
+    -fx-min-width: 100px;
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+}
+
+.qf-black-btn:disabled,
+.qf-blue-btn:disabled {
+    -fx-opacity: 0.4;
+}
+
+
+/*******************************************************************************
+ *                                                                             *
+ * Black Button                                                                *
+ *                                                                             *
+ ******************************************************************************/
+
+.qf-black-btn {
+    -fx-background-color: #1B1B1B;
+}
+
+.qf-black-btn:hover {
+    -fx-background-color: #353535;
+}
+
+.qf-black-btn:pressed {
+    -fx-background-color: #000000;
+}
+
+
+/*******************************************************************************
+ *                                                                             *
+ * Blue Button                                                                 *
+ *                                                                             *
+ ******************************************************************************/
+
+.qf-blue-btn {
+    -fx-background-color: #313E4C;
+}
+
+.qf-blue-btn:hover {
+    -fx-background-color: #365578;
+}
+
+.qf-blue-btn:pressed {
+    -fx-background-color: #232F3C;
+}
+
+
+/*******************************************************************************
+ *                                                                             *
+ * Welcome Button                                                              *
+ *                                                                             *
+ ******************************************************************************/
+
+.qf-welcome-btn {
+    -fx-padding: 0 0 0 0;
+    -fx-alignment: CENTER;
+    -fx-cursor: hand;
+    -fx-border-color: #6EADF7;
+    -fx-border-width: 1px;
+    -fx-border-radius: 2;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * MenuButton                                                                  *
+ *                                                                             *
+ ******************************************************************************/
+
+.menu-button {
+    -fx-cursor: hand;
+    -fx-background-color: #1B1B1B;
+    -fx-padding: 2px 0px 2px 0px;
+}
+
+.menu-button>.label {
+    -fx-text-fill: #cccccc;
+    -fx-font-size: 20px;
+    -fx-padding: 0 10px 0 10px;
+}
+
+.menu-button:hover,
+.menu-button:showing {
+    -fx-text-fill: white;
+    -fx-background-color: #303030;
+    -fx-background-radius: 5px;
+}
+
+.menu-button>*>* {
+    -fx-background-color: #1B1B1B;
+}
+
+.menu-button>.arrow-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.menu-button>.arrow-button>.arrow {
+    -fx-padding: 0;
+}
+
+
+/*******************************************************************************
+ *                                                                             *
+ * MenuItem                                                                    *
+ *                                                                             *
+ ******************************************************************************/
+
+.menu-item {
+    -fx-background-color: #1B1B1B;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+}
+
+.menu-item>.left-container {
+    -fx-padding: 0 0 0 0;
+}
+
+.menu-item>.label {
+    -fx-padding: 7px 15px 7px 15px;
+    -fx-text-fill: #cccccc;
+}
+
+.menu-item:hover,
+.menu-item:focused,
+.menu-item:showing {
+    -fx-background-color: #264365;
+}
+
+.menu-item:focused>.label {
+    -fx-text-fill: white;
+}
+
+
+/*******************************************************************************
+ *                                                                             *
+ * ChoiceBox                                                                   *
+ *                                                                             *
+ ******************************************************************************/
+
+
+/* Background color of the whole context menu */
+
+.choice-box .context-menu {
+    -fx-background-color: #1B1B1B;
+}
+
+
+/* Focused item background color in the list */
+
+.choice-box .menu-item:focused {
+    -fx-background-color: #6EADF7;
+}
+
+
+/* Text color of non-focused items in the list */
+
+.choice-box .menu-item>.label {
+    -fx-text-fill: white;
+}
+
+
+/* Text color of focused item in the list */
+
+.choice-box .menu-item:focused>.label {
+    -fx-text-fill: black;
+}
+
+.choice-box>.context-menu {
+    -fx-background-radius: 0;
+}
+
+.choice-box .label {
+    -fx-text-fill: white;
+}
+
+
+/*******************************************************************************
+ *                                                                             *
+ * DialogPane                                                                  *
+ *                                                                             *
+ ******************************************************************************/
+
+.dialog-pane>.content {
+    -fx-padding: 0;
+}
+
+
+/*******************************************************************************
+ *                                                                             *
+ * ComboBox                                                                    *
+ *                                                                             *
+ ******************************************************************************/
+
+.combo-box {
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+    -fx-background-radius: 0;
+    -fx-padding: 0;
+    -fx-background-insets: 0;
+}
+
+.combo-box>.list-cell,
+.combo-box-base>.arrow-button {
+    -fx-background-color: #353535;
+    -fx-background-radius: 0;
+}
+
+.combo-box>.list-cell {
+    -fx-text-fill: white;
+    /* -fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em; */
+    -fx-padding: 0;
+    -fx-padding: 2 10 2 10;
+    -fx-font: normal 12px 'Fredoka';
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * ScrollPane                                                                  *
+ *                                                                             *
+ ******************************************************************************/
+
+.scroll-pane>.viewport {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane>.scroll-bar:vertical>.increment-button,
+.scroll-pane>.scroll-bar:vertical>.decrement-button,
+.scroll-pane>.scroll-bar:vertical {
+    -fx-background-color: #464646;
+}
+
+.scroll-pane>.scroll-bar:vertical {
+    -fx-padding: 0;
+}
+
+
+/* Removing the arrows on scroll pane */
+
+.scroll-pane>.scroll-bar:horizontal>.increment-button,
+.scroll-pane>.scroll-bar:horizontal>.decrement-button,
+.scroll-pane>.scroll-bar:vertical>.increment-button,
+.scroll-pane>.scroll-bar:vertical>.decrement-button {
+    -fx-padding: 0 0 0 0;
+}
+
+.scroll-bar>.increment-button,
+.scroll-bar>.decrement-button {
+    -fx-padding: 0 0 0 0;
+}
+
+.scroll-bar:horizontal>.increment-button,
+.scroll-bar:horizontal>.decrement-button {
+    -fx-background-insets: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0 0;
+}
+
+.scroll-bar:vertical>.increment-button,
+.scroll-bar:vertical>.decrement-button {
+    -fx-background-insets: 0 0 0 0, 0 0 0 0, 0 0 0 0;
+}
+
+.scroll-bar:horizontal>.decrement-button>.decrement-arrow {
+    -fx-padding: 0 0 0 0;
+}
+
+.scroll-bar:horizontal>.increment-button>.increment-arrow {
+    -fx-padding: 0 0 0 0;
+}
+
+.scroll-bar:vertical>.decrement-button>.decrement-arrow {
+    -fx-padding: 0 0 0 0;
+}
+
+.scroll-bar:vertical>.increment-button>.increment-arrow {
+    -fx-padding: 0 0 0 0;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-padding: 0 0 0 0;
+    -fx-background-insets: 1;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+}
+
+
+/*******************************************************************************
+ *                                                                             *
+ * ListView and ListCell                                                       *
+ *                                                                             *
+ ******************************************************************************/
+
+.list-cell {
+    -fx-background-color: #181818;
+    -fx-text-fill: #9D9D9D;
+}
+
+.list-cell:odd {
+    -fx-background-color: #242424;
+}
+
+.list-cell:filled:selected {
+    -fx-background-color: #264365;
+    -fx-text-fill: white;
+}
+
+
+/*******************************************************************************
+ *                                                                             *
+ * CheckBox                                                                    *
+ *                                                                             *
+ ******************************************************************************/
+
+.check-box {
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+}
+
+.check-box>.box {
+    -fx-background-color: #D9D9D9;
+    -fx-background-radius: 0;
+    -fx-padding: 0.166667em 0.166667em 0.25em 0.25em;
+    /* 2 2 3 3 */
+    -fx-background-insets: -1;
+}
+
+.check-box:indeterminate>.box {
+    -fx-padding: 0;
+}
+
+.check-box:indeterminate>.box>.mark {
+    -fx-shape: "M0,0H10V2H0Z";
+    -fx-background-color: transparent;
+    -fx-scale-shape: false;
+}
+
+.check-box:selected>.box {
+    -fx-background-color: white;
+    -fx-background-insets: -1;
+}
+
+.check-box:selected>.box>.mark,
+.check-box:indeterminate>.box>.mark {
+    -fx-background-color: black;
+    -fx-background-insets: 0;
+}
+
+
+/*******************************************************************************
+ *                                                                             *
+ * TreeView                                                                    *
+ *                                                                             *
+ ******************************************************************************/
+
+.tree-view {
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-border-insets: 2;
+}
+
+.tree-view,
+.tree-cell {
+    -fx-background-color: #242424;
+    -fx-text-fill: #cccccc;
+    -fx-font-family: "Fredoka";
+}
+
+.tree-cell:expanded,
+.tree-cell:sub-tree-item {
+    -fx-background-color: #181818;
+}
+
+.tree-cell:selected {
+    -fx-font-weight: bold;
+    -fx-background-color: #365578;
+}
+
+.tree-cell {
+    -fx-padding: 0.75em 0em 0.75em 0em;
+}
+
+.tree-cell:sub-tree-item {
+    -fx-padding: 0.25em;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Alert Stylization                                                           *
+ *                                                                             *
+ ******************************************************************************/
+
+.alert {
+    -fx-background: #222222;
+}
+
+#customAlert>.content {
+    -fx-padding: 10px;
+}
+
+#customAlert:header .header-panel {
+    -fx-background-color: #1B1B1B;
+    -fx-border-style: hidden hidden solid hidden;
+    -fx-border-width: 1;
+    -fx-border-color: #6EADF7;
+}

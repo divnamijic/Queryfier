@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--The level of internal Log4j events that should be logged to the console.-->
+<Configuration>
+
+    <Properties>
+        <Property name="filename">log/queryfier.log</Property>
+    </Properties>
+
+    <Appenders>
+
+        <Console name="STDOUT">
+            <PatternLayout pattern="%-5p %c %m%n"/>
+        </Console>
+
+        <File name="FILE" fileName="${filename}">
+            <!--
+            %d{yyyy-MM-dd HH:mm:ss} = date and time format
+            %t                      = thread name
+            %-5p                    = logging priority, like DEBUG or ERROR, -5 is for the pretty print format
+            %c{1}                   = loger name
+            %L                      = line number of the logging request
+            %m%n                    = message to log with line break
+            %xThrowable{separator(|)} = have the stacktrace in a single line
+            -->
+            <PatternLayout>
+                <Pattern>
+                    %d{yyyy-MM-dd HH:mm:ss.SSS} %p %c:%L - %m%xThrowable{separator(|)}%n
+                    <!-- Chainsaw configuration -->
+                    <!-- Log file format type: PatternLayout format -->
+                    <!-- Log file format: %d{yyyy-MM-dd HH:mm:ss.SSS} %p %c:%L - %m%n -->
+                    <!-- Log file timestamp format: yyyy-MM-dd HH:mm:ss.SSS -->
+                </Pattern>
+            </PatternLayout>
+        </File>
+
+    </Appenders>
+
+    <Loggers>
+        <Logger name="edu.rit.croatia.iste422.g6.qf.io.parser.SaveFileParser" level="info">
+            <AppenderRef ref="FILE"/>
+        </Logger>
+        <Logger name="edu.rit.croatia.iste422.g6.qf.io.parser.XMLFileParser" level="info">
+            <AppenderRef ref="FILE"/>
+        </Logger>
+        <Logger name="edu.rit.croatia.iste422.g6.qf.controller.handler.CreateProjectHandler" level="info">
+            <AppenderRef ref="FILE"/>
+        </Logger>
+        <Logger name="edu.rit.croatia.iste422.g6.qf.model.app.QueryfierConfiguration" level="info">
+            <AppenderRef ref="FILE"/>
+        </Logger>
+        <Logger name="edu.rit.croatia.iste422.g6.qf.controller.QueryfierManager" level="info">
+            <AppenderRef ref="FILE"/>
+        </Logger>
+        <Logger name="edu.rit.croatia.iste422.g6.qf.model.QueryfierStorage" level="info">
+            <AppenderRef ref="FILE"/>
+        </Logger>
+        <Logger name="edu.rit.croatia.iste422.g6.qf.io.parser.EdgeFileParser" level="info">
+            <AppenderRef ref="FILE"/>
+        </Logger>
+        <Logger name="edu.rit.croatia.iste422.g6.qf.io.parser.JSONFileParser" level="info">
+            <AppenderRef ref="FILE"/>
+        </Logger>
+        <Root level="fatal">
+            <AppenderRef ref="STDOUT"/>
+        </Root>
+    </Loggers>
+</Configuration>

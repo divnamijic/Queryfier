@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane stylesheets="@../assets/css/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="576.0" prefWidth="1024.0" style="-fx-background-color: #222222;">
+      <children>
+            <ImageView fitHeight="576.0" fitWidth="1024.0">
+               <image>
+                  <Image url="@../assets/media/BlueShade.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="134.0" layoutY="83.0" prefHeight="24.0" prefWidth="83.0" text="1st entity" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="385.0" layoutY="83.0" prefHeight="24.0" prefWidth="93.0" text="2nd entity" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="defineEntityAttributeButton" alignment="CENTER" layoutX="171.0" layoutY="481.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="260.0" text="Define Entities/Attributes" textAlignment="CENTER" textFill="WHITE">
+               <styleClass>
+                  <String fx:value="qf-black-btn" />
+                  <String fx:value="shadow" />
+               </styleClass></Button>
+            <Rectangle arcHeight="420.0" fill="#464646" height="420.0" layoutX="600.0" layoutY="86.0" stroke="#464646" strokeType="INSIDE" width="1.0" />
+            <Label alignment="CENTER" layoutX="721.0" layoutY="83.0" prefHeight="24.0" prefWidth="190.0" text="Relation Modification" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#464646" height="1.0" layoutX="676.0" layoutY="126.0" stroke="#464646" strokeType="INSIDE" width="280.0" />
+            <Label layoutX="650.0" layoutY="155.0" prefHeight="19.0" prefWidth="66.0" text="1st Entity" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl2ndEntityRM" layoutX="829.0" layoutY="151.0" prefHeight="19.0" prefWidth="75.0" text="2nd Entity" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="firstEntityTextField" editable="false" layoutX="650.0" layoutY="176.0" prefHeight="25.0" prefWidth="148.0" style="-fx-background-color: #353535; -fx-border-color: #000000; -fx-text-fill: #ffffff; -fx-padding: 2 10 2 10;" />
+            <TextField fx:id="secondEntityTextField" editable="false" layoutX="829.0" layoutY="176.0" prefHeight="25.0" prefWidth="148.0" style="-fx-background-color: #353535; -fx-border-color: #000000; -fx-text-fill: #ffffff; -fx-padding: 2 10 2 10;" />
+            <Label fx:id="lbl1stEntityAttributeRM" layoutX="650.0" layoutY="213.0" prefHeight="17.0" prefWidth="117.0" text="1st Entity Attribute" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl2ndEntityAttributeRM" layoutX="829.0" layoutY="213.0" prefHeight="17.0" prefWidth="125.0" text="2nd Entity Attribute" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="firstEntityAttributeTextField" editable="false" layoutX="650.0" layoutY="233.0" prefHeight="25.0" prefWidth="148.0" style="-fx-background-color: #242F3C; -fx-border-color: #000000; -fx-text-fill: #cccccc; -fx-padding: 2 10 2 10;" />
+            <TextField fx:id="secondEntityAttributeTextField" editable="false" layoutX="829.0" layoutY="233.0" prefHeight="25.0" prefWidth="148.0" style="-fx-background-color: #242F3C; -fx-border-color: #000000; -fx-text-fill: #cccccc; -fx-padding: 2 10 2 10;" />
+            <Button fx:id="bindUnbindButton" alignment="CENTER" layoutX="684.0" layoutY="481.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="260.0" text="Bind/Unbind" textAlignment="CENTER" textFill="WHITE">
+               <styleClass>
+                  <String fx:value="qf-black-btn" />
+                  <String fx:value="shadow" />
+               </styleClass></Button>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1b1b1b" height="126.0" layoutX="650.0" layoutY="311.0" stroke="BLACK" strokeType="INSIDE" width="327.0" />
+            <TreeView fx:id="firstEntityTreeView" layoutX="76.0" layoutY="126.0" prefHeight="334.0" prefWidth="200.0" style="-fx-background-color: transparent;" />
+            <TreeView fx:id="secondEntityTreeView" layoutX="332.0" layoutY="126.0" prefHeight="334.0" prefWidth="200.0" style="-fx-background-color: transparent;" />
+            <Rectangle fx:id="visualConnectorRectangle" arcHeight="5.0" fill="#588bc4" height="1.0" layoutX="738.0" layoutY="381.0" stroke="#588bc4" strokeType="INSIDE" visible="false" width="143.0" />
+            <SVGPath content="M9 42C8.2 42 7.5 41.7 6.9 41.1C6.3 40.5 6 39.8 6 39V9C6 8.2 6.3 7.5 6.9 6.9C7.5 6.3 8.2 6 9 6H39C39.8 6 40.5 6.3 41.1 6.9C41.7 7.5 42 8.2 42 9V39C42 39.8 41.7 40.5 41.1 41.1C40.5 41.7 39.8 42 39 42H9ZM9 17H39V9H9V17ZM9 28H39V20H9V28ZM9 39H39V31H9V39ZM12.15 14.5V11.5H15.15V14.5H12.15ZM12.15 25.5V22.5H15.15V25.5H12.15ZM12.15 36.5V33.5H15.15V36.5H12.15Z" fill="#6eadf7" layoutX="696.0" layoutY="356.0" />
+            <SVGPath fx:id="svgTable2RM" content="M9 42C8.2 42 7.5 41.7 6.9 41.1C6.3 40.5 6 39.8 6 39V9C6 8.2 6.3 7.5 6.9 6.9C7.5 6.3 8.2 6 9 6H39C39.8 6 40.5 6.3 41.1 6.9C41.7 7.5 42 8.2 42 9V39C42 39.8 41.7 40.5 41.1 41.1C40.5 41.7 39.8 42 39 42H9ZM9 17H39V9H9V17ZM9 28H39V20H9V28ZM9 39H39V31H9V39ZM12.15 14.5V11.5H15.15V14.5H12.15ZM12.15 25.5V22.5H15.15V25.5H12.15ZM12.15 36.5V33.5H15.15V36.5H12.15Z" fill="#6eadf7" layoutX="875.0" layoutY="356.0" />
+            <Label fx:id="firstEntityVisualLabel" alignment="CENTER" layoutX="697.0" layoutY="345.0" text="Instructor" textAlignment="CENTER" textFill="#a3a3a3">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="secondEntityVisualLabel" alignment="CENTER" layoutX="883.0" layoutY="345.0" text="Course" textAlignment="CENTER" textFill="#a3a3a3">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="firstEntityAttributeVisualLabel" layoutX="741.0" layoutY="382.0" text="ID" textFill="#a3a3a3">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Label>
+            <Label fx:id="secondEntityAttributeVisualLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="834.0" layoutY="369.0" text="InstructorID" textAlignment="RIGHT" textFill="#a3a3a3">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Label>
+      </children>
+    </AnchorPane>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="1024.0" style="-fx-background-color: #1B1B1B; -fx-border-style: solid hidden hidden hidden; -fx-border-width: 1; -fx-border-color: #6EADF7;" stylesheets="@../assets/css/style.css" AnchorPane.bottomAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="20.0" prefWidth="1024.0" spacing="20.0">
+               <children>
+                  <Text fx:id="qfFooterText" fill="#9d9d9d" strokeType="OUTSIDE" strokeWidth="0.0" text="Version 0.12alpha" />
+               </children>
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="1024.0" style="-fx-background-color: #1B1B1B; -fx-border-style: hidden hidden solid hidden; -fx-border-width: 1; -fx-border-color: #6EADF7;" stylesheets="@../assets/css/style.css">
+         <children>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="1024.0">
+               <children>
+                  <Text fx:id="projectTitleText" fill="#6daefb" strokeType="OUTSIDE" strokeWidth="0.0" text="Study.edg">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" layoutX="512.0" prefHeight="50.0" prefWidth="512.0" spacing="20.0">
+               <children>
+                  <VBox id="exportIconMenuItem" fx:id="exportIconVBox" alignment="CENTER">
+                     <children>
+                        <SVGPath id="exportIcon" fx:id="exportIconSVGPath1" content="M23.1 30.625L28 25.725V29.75H29.75V22.75H22.75V24.5H26.775L21.875 29.4L23.1 30.625ZM3.5 31.5C2.5375 31.5 1.71354 31.1573 1.02812 30.4719C0.342708 29.7865 0 28.9625 0 28V3.5C0 2.5375 0.342708 1.71354 1.02812 1.02812C1.71354 0.342708 2.5375 0 3.5 0H28C28.9625 0 29.7865 0.342708 30.4719 1.02812C31.1573 1.71354 31.5 2.5375 31.5 3.5V15.225C30.9458 14.9625 30.3771 14.7365 29.7937 14.5469C29.2104 14.3573 28.6125 14.2188 28 14.1312V3.5H3.5V28H14.0875C14.175 28.6417 14.3135 29.2542 14.5031 29.8375C14.6927 30.4208 14.9187 30.975 15.1812 31.5H3.5ZM3.5 26.25V28V3.5V14.1312V14V26.25ZM7 24.5H14.1312C14.2188 23.8875 14.3573 23.2896 14.5469 22.7062C14.7365 22.1229 14.9479 21.5542 15.1812 21H7V24.5ZM7 17.5H17.675C18.6083 16.625 19.651 15.8958 20.8031 15.3125C21.9552 14.7292 23.1875 14.3354 24.5 14.1312V14H7V17.5ZM7 10.5H24.5V7H7V10.5ZM26.25 35C23.8292 35 21.7656 34.1469 20.0594 32.4406C18.3531 30.7344 17.5 28.6708 17.5 26.25C17.5 23.8292 18.3531 21.7656 20.0594 20.0594C21.7656 18.3531 23.8292 17.5 26.25 17.5C28.6708 17.5 30.7344 18.3531 32.4406 20.0594C34.1469 21.7656 35 23.8292 35 26.25C35 28.6708 34.1469 30.7344 32.4406 32.4406C30.7344 34.1469 28.6708 35 26.25 35Z" fill="#365578" />
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="512.0" spacing="10.0">
+               <children>
+                  <MenuButton mnemonicParsing="false" text="File" textFill="#cccccc">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <items>
+                        <MenuItem fx:id="openFileMenuItem" mnemonicParsing="false" text="Open">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="saveFileMenuItem" mnemonicParsing="false" text="Save">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="saveAsFileMenuItem" mnemonicParsing="false" text="Save As">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="exportFileMenuItem" mnemonicParsing="false" text="Export">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="E" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="closeProjectMenuItem" mnemonicParsing="false" text="Close Project">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="Q" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="exitProgramMenuItem" mnemonicParsing="false" text="Exit">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="Q" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                     </items>
+                  </MenuButton>
+                  <Line endY="-24.0" stroke="#555555" strokeLineCap="ROUND" strokeWidth="2.0" />
+                  <MenuButton mnemonicParsing="false" text="Edit" textFill="#cccccc">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <items>
+                        <MenuItem fx:id="attributeEditorScreenMenuItem" mnemonicParsing="false" text="Entities/Attributes">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="A" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="entityRelationsEditorScreenMenuItem" mnemonicParsing="false" text="Entity Relations">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="E" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                     </items>
+                  </MenuButton>
+                  <Line endY="-24.0" stroke="#555555" strokeLineCap="ROUND" strokeWidth="2.0" />
+                  <MenuButton mnemonicParsing="false" text="Help" textFill="#cccccc">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <items>
+                        <MenuItem fx:id="contactMenuItem" mnemonicParsing="false" text="Contact" />
+                        <MenuItem fx:id="aboutUsMenuItem" mnemonicParsing="false" text="About Us" />
+                     </items>
+                  </MenuButton>
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

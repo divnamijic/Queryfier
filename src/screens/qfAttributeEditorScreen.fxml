@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1024.0" style="-fx-background-color: #222222;" stylesheets="@../assets/css/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="1024.0" style="-fx-background-color: #1B1B1B; -fx-border-style: hidden hidden solid hidden; -fx-border-width: 1; -fx-border-color: #6EADF7;" stylesheets="@../assets/css/style.css">
+         <children>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="1024.0">
+               <children>
+                  <Text fx:id="projectTitleText" fill="#6daefb" strokeType="OUTSIDE" strokeWidth="0.0" text="Study.edg">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" layoutX="512.0" prefHeight="50.0" prefWidth="512.0" spacing="20.0">
+               <children>
+                  <VBox id="exportIconMenuItem" fx:id="exportIconVBox" alignment="CENTER">
+                     <children>
+                        <SVGPath id="exportIcon" fx:id="exportIconSVGPath" content="M23.1 30.625L28 25.725V29.75H29.75V22.75H22.75V24.5H26.775L21.875 29.4L23.1 30.625ZM3.5 31.5C2.5375 31.5 1.71354 31.1573 1.02812 30.4719C0.342708 29.7865 0 28.9625 0 28V3.5C0 2.5375 0.342708 1.71354 1.02812 1.02812C1.71354 0.342708 2.5375 0 3.5 0H28C28.9625 0 29.7865 0.342708 30.4719 1.02812C31.1573 1.71354 31.5 2.5375 31.5 3.5V15.225C30.9458 14.9625 30.3771 14.7365 29.7937 14.5469C29.2104 14.3573 28.6125 14.2188 28 14.1312V3.5H3.5V28H14.0875C14.175 28.6417 14.3135 29.2542 14.5031 29.8375C14.6927 30.4208 14.9187 30.975 15.1812 31.5H3.5ZM3.5 26.25V28V3.5V14.1312V14V26.25ZM7 24.5H14.1312C14.2188 23.8875 14.3573 23.2896 14.5469 22.7062C14.7365 22.1229 14.9479 21.5542 15.1812 21H7V24.5ZM7 17.5H17.675C18.6083 16.625 19.651 15.8958 20.8031 15.3125C21.9552 14.7292 23.1875 14.3354 24.5 14.1312V14H7V17.5ZM7 10.5H24.5V7H7V10.5ZM26.25 35C23.8292 35 21.7656 34.1469 20.0594 32.4406C18.3531 30.7344 17.5 28.6708 17.5 26.25C17.5 23.8292 18.3531 21.7656 20.0594 20.0594C21.7656 18.3531 23.8292 17.5 26.25 17.5C28.6708 17.5 30.7344 18.3531 32.4406 20.0594C34.1469 21.7656 35 23.8292 35 26.25C35 28.6708 34.1469 30.7344 32.4406 32.4406C30.7344 34.1469 28.6708 35 26.25 35Z" fill="#365578" />
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="512.0" spacing="10.0">
+               <children>
+                  <MenuButton mnemonicParsing="false" text="File" textFill="#cccccc">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <items>
+                        <MenuItem fx:id="openFileMenuItem" mnemonicParsing="false" text="Open">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="saveFileMenuItem" mnemonicParsing="false" text="Save">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="saveAsFileMenuItem" mnemonicParsing="false" text="Save As">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="exportFileMenuItem" mnemonicParsing="false" text="Export">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="E" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="closeProjectMenuItem" mnemonicParsing="false" text="Close Project">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="Q" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="exitProgramMenuItem" mnemonicParsing="false" text="Exit">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="Q" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                     </items>
+                  </MenuButton>
+                  <Line endY="-24.0" stroke="#555555" strokeLineCap="ROUND" strokeWidth="2.0" />
+                  <MenuButton mnemonicParsing="false" text="Edit" textFill="#cccccc">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <items>
+                        <MenuItem fx:id="attributeEditorScreenMenuItem" mnemonicParsing="false" text="Entities/Attributes">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="A" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="entityRelationsEditorScreenMenuItem" mnemonicParsing="false" text="Entity Relations">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="E" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                     </items>
+                  </MenuButton>
+                  <Line endY="-24.0" stroke="#555555" strokeLineCap="ROUND" strokeWidth="2.0" />
+                  <MenuButton mnemonicParsing="false" text="Help" textFill="#cccccc">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <items>
+                        <MenuItem fx:id="contactMenuItem" mnemonicParsing="false" text="Contact" />
+                        <MenuItem fx:id="aboutUsMenuItem" mnemonicParsing="false" text="About Us" />
+                     </items>
+                  </MenuButton>
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="1024.0" style="-fx-background-color: #1B1B1B; -fx-border-style: solid hidden hidden hidden; -fx-border-width: 1; -fx-border-color: #6EADF7;" stylesheets="@../assets/css/style.css" AnchorPane.bottomAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="20.0" prefWidth="1024.0" spacing="20.0">
+               <children>
+                  <Text fx:id="qfFooterText" fill="#9d9d9d" strokeType="OUTSIDE" strokeWidth="0.0" text="Version 0.12alpha" />
+               </children>
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <HBox layoutY="50.0" prefHeight="507.0" prefWidth="1024.0">
+         <children>
+            <VBox prefHeight="507.0" prefWidth="360.0">
+               <children>
+                  <HBox alignment="BOTTOM_CENTER" prefHeight="75.0" prefWidth="380.0">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="fredoka-text" text="Entity">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <padding>
+                        <Insets bottom="15.0" />
+                     </padding>
+                  </HBox>
+                  <ScrollPane hbarPolicy="NEVER" prefHeight="315.0" prefWidth="352.0" style="-fx-border-style: solid; -fx-background-color: #000000;">
+                     <content>
+                        <GridPane fx:id="entityGridPane" layoutX="-4.0" prefHeight="313.0" prefWidth="266.0" style="-fx-background-color: #1B1B1B;" styleClass="fredoka-text">
+                              <columnConstraints>
+                                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              </columnConstraints>
+                        </GridPane>
+                     </content>
+                     <VBox.margin>
+                        <Insets left="33.0" right="33.0" />
+                     </VBox.margin>
+                  </ScrollPane>
+                  <HBox alignment="BOTTOM_CENTER" prefHeight="36.0" prefWidth="352.0">
+                     <children>
+                        <Button fx:id="defineEntityRelationsButton" mnemonicParsing="false" prefHeight="19.0" prefWidth="243.0" text="Define Entity Relations" textFill="WHITE">
+                           <styleClass>
+                              <String fx:value="qf-black-btn" />
+                              <String fx:value="fredoka-text" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="29.0" prefWidth="352.0">
+                     <children>
+                        <HBox alignment="BOTTOM_CENTER" prefHeight="39.0" prefWidth="142.0">
+                           <children>
+                              <Button fx:id="entityAddButton" mnemonicParsing="false" text="+" textFill="WHITE" visible="false">
+                                 <styleClass>
+                                    <String fx:value="qf-black-btn" />
+                                    <String fx:value="fredoka-text" />
+                                 </styleClass>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="142.0">
+                           <children>
+                              <Button fx:id="entityRemoveButton" mnemonicParsing="false" text="-" textFill="WHITE" visible="false">
+                                 <styleClass>
+                                    <String fx:value="qf-black-btn" />
+                                    <String fx:value="fredoka-text" />
+                                 </styleClass>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="507.0" prefWidth="360.0" style="-fx-border-style: hidden solid hidden hidden; -fx-border-color: #464646;">
+               <children>
+                  <HBox alignment="BOTTOM_CENTER" prefHeight="75.0" prefWidth="200.0">
+                     <padding>
+                        <Insets bottom="15.0" />
+                     </padding>
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="fredoka-text" text="Attributes">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <VBox prefHeight="378.0" prefWidth="350.0">
+                     <padding>
+                        <Insets left="33.0" right="33.0" />
+                     </padding>
+                     <children>
+                        <ListView fx:id="attributeListView" prefHeight="339.0" prefWidth="200.0" style="-fx-background-color: #181818; -fx-border-style: solid; -fx-border-color: black;" styleClass="fredoka-text">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></ListView>
+                        <HBox prefHeight="39.0" prefWidth="284.0">
+                           <children>
+                              <HBox alignment="BOTTOM_CENTER" prefHeight="83.0" prefWidth="142.0">
+                                 <children>
+                                    <Button fx:id="attributeAddButton" mnemonicParsing="false" text="+" textFill="WHITE" visible="false">
+                                       <styleClass>
+                                          <String fx:value="qf-black-btn" />
+                                          <String fx:value="fredoka-text" />
+                                       </styleClass>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="142.0">
+                                 <children>
+                                    <Button fx:id="attributeRemoveButton" mnemonicParsing="false" text="-" textFill="WHITE" visible="false">
+                                       <styleClass>
+                                          <String fx:value="qf-black-btn" />
+                                          <String fx:value="fredoka-text" />
+                                       </styleClass>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="507.0" prefWidth="330.0">
+               <children>
+                  <HBox alignment="BOTTOM_CENTER" prefHeight="75.0" prefWidth="291.0">
+                     <padding>
+                        <Insets bottom="15.0" />
+                     </padding>
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="fredoka-text" text="Attribute Information">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="378.0" prefWidth="264.0" style="-fx-background-color: #1B1B1B; -fx-border-style: solid; -fx-border-color: #000000;">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="22.0" prefWidth="200.0">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="fredoka-text" text="Name:">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="2.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <TextField fx:id="attributeNameTextField" prefHeight="28.0" prefWidth="224.0" style="-fx-background-color: #1B1B1B; -fx-border-style: hidden hidden solid hidden; -fx-border-color: #ffffff; -fx-font: normal 16px 'Fredoka';" styleClass="tf-user-input">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font></TextField>
+                           </children>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets bottom="11.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="28.0" prefWidth="306.0">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="fredoka-text" text="Type:">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="2.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <ChoiceBox fx:id="dataTypeChoiceBox" prefHeight="28.0" prefWidth="255.0" style="-fx-background-color: #242424; -fx-border-style: solid; -fx-border-color: #000000; -fx-background-insets: 0;" styleClass="fredoka-text">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></ChoiceBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="11.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="22.0" prefWidth="200.0">
+                           <VBox.margin>
+                              <Insets bottom="11.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <children>
+                              <Text fx:id="lengthText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="fredoka-text" text="Length:">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="2.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <TextField fx:id="lengthTextField" prefHeight="28.0" prefWidth="218.0" style="-fx-background-color: #1B1B1B; -fx-border-style: hidden hidden solid hidden; -fx-border-color: #ffffff;">
+                                 <styleClass>
+                                    <String fx:value="fredoka-text" />
+                                    <String fx:value="tf-user-input" />
+                                 </styleClass>
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font></TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="28.0" prefWidth="288.0">
+                           <VBox.margin>
+                              <Insets bottom="11.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="fredoka-text" text="Default Value:">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="2.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <TextField fx:id="defaultValueTextField" prefHeight="28.0" prefWidth="186.0" style="-fx-background-color: #1B1B1B; -fx-border-style: hidden hidden solid hidden; -fx-border-color: #ffffff;" styleClass="tf-user-input">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font></TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="22.0" prefWidth="200.0">
+                           <VBox.margin>
+                              <Insets bottom="11.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="fredoka-text" text="Primary Key: ">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Text>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="22.0" prefWidth="183.0">
+                                 <children>
+                                    <CheckBox fx:id="primaryKeyCheckBox" mnemonicParsing="false" prefHeight="18.0" prefWidth="15.0" style="-fx-background-color: #D9D9D9;">
+                                       <HBox.margin>
+                                          <Insets left="2.0" />
+                                       </HBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </CheckBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="22.0" prefWidth="200.0">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="fredoka-text" text="Allow Null:">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Text>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="22.0" prefWidth="203.0">
+                                 <children>
+                                    <CheckBox fx:id="allowNullCheckBox" mnemonicParsing="false" prefHeight="18.0" prefWidth="15.0" style="-fx-background-color: #D9D9D9;">
+                                       <HBox.margin>
+                                          <Insets left="2.0" />
+                                       </HBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </CheckBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="11.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="22.0" prefWidth="200.0">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <children>
+                              <Text fx:id="signedText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="fredoka-text" text="Signed:">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Text>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="22.0" prefWidth="224.0">
+                                 <children>
+                                    <CheckBox fx:id="signedCheckBox" mnemonicParsing="false" prefHeight="18.0" prefWidth="15.0" style="-fx-background-color: #D9D9D9;">
+                                       <HBox.margin>
+                                          <Insets left="2.0" />
+                                       </HBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </CheckBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="11.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="22.0" prefWidth="200.0">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <children>
+                              <Text fx:id="autoIncrementText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="fredoka-text" text="Auto Increment:">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Text>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="22.0" prefWidth="174.0">
+                                 <children>
+                                    <CheckBox fx:id="autoIncrementCheckBox" mnemonicParsing="false" prefHeight="18.0" prefWidth="15.0" style="-fx-background-color: #D9D9D9;">
+                                       <HBox.margin>
+                                          <Insets left="2.0" />
+                                       </HBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </CheckBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets right="10.0" top="15.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets left="18.0" right="18.0" />
+                     </VBox.margin>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

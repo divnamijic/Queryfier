@@ -1,0 +1,21 @@
+CREATE DATABASE Study;
+USE Study;
+
+CREATE TABLE `STUDENT` (
+  `ID` VARCHAR(50),
+  `FullName` VARCHAR(50),
+  PRIMARY KEY (`ID`)
+);
+
+CREATE TABLE `INSTRUCTOR` (
+  `ID` VARCHAR(50),
+  `FullName` VARCHAR(50),
+  PRIMARY KEY (`ID`)
+);
+
+CREATE TABLE `COURSE` (
+  `ID` VARCHAR(50),
+  `Name` VARCHAR(50),
+  `InstructorID` VARCHAR(50),
+  PRIMARY KEY (`ID`)
+);
